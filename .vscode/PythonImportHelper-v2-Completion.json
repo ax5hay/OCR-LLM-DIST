@@ -1,0 +1,575 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOP_K",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOP_P",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TEMPERATURE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_EXECUTION_TIMEOUT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_GENERATE_ENDPOINT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "HEALTH_CHECK_TIMEOUT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MODELS_FETCH_TIMEOUT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_MODELS_ENDPOINT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_VERSION_ENDPOINT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_ICON",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_TITLE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOP_K",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOP_P",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MODELS_CACHE_TTL",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TEMPERATURE",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "isExtraImport": true,
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "isExtraImport": true,
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "isExtraImport": true,
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "isExtraImport": true,
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "fitz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "fitz",
+        "description": "fitz",
+        "detail": "fitz",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "run_model",
+        "importPath": "services.model_service",
+        "description": "services.model_service",
+        "isExtraImport": true,
+        "detail": "services.model_service",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_doc",
+        "importPath": "utils.file_utils",
+        "description": "utils.file_utils",
+        "isExtraImport": true,
+        "detail": "utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "check_api_health",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "isExtraImport": true,
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_models",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "isExtraImport": true,
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "ngrok",
+        "importPath": "pyngrok",
+        "description": "pyngrok",
+        "isExtraImport": true,
+        "detail": "pyngrok",
+        "documentation": {}
+    },
+    {
+        "label": "run_model",
+        "kind": 2,
+        "importPath": "services.model_service",
+        "description": "services.model_service",
+        "peekOfCode": "def run_model(prompt, model=DEFAULT_MODEL, temperature=DEFAULT_TEMPERATURE, \n             top_k=DEFAULT_TOP_K, top_p=DEFAULT_TOP_P):\n    \"\"\"\n    Run a model inference with the specified parameters.\n    Args:\n        prompt (str): The input prompt for the model\n        model (str): The model name to use\n        temperature (float): Temperature parameter for generation\n        top_k (int): Top-K parameter for generation\n        top_p (float): Top-P parameter for generation",
+        "detail": "services.model_service",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "services.model_service",
+        "description": "services.model_service",
+        "peekOfCode": "logger = setup_logger()\ndef run_model(prompt, model=DEFAULT_MODEL, temperature=DEFAULT_TEMPERATURE, \n             top_k=DEFAULT_TOP_K, top_p=DEFAULT_TOP_P):\n    \"\"\"\n    Run a model inference with the specified parameters.\n    Args:\n        prompt (str): The input prompt for the model\n        model (str): The model name to use\n        temperature (float): Temperature parameter for generation\n        top_k (int): Top-K parameter for generation",
+        "detail": "services.model_service",
+        "documentation": {}
+    },
+    {
+        "label": "check_api_health",
+        "kind": 2,
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "peekOfCode": "def check_api_health():\n    \"\"\"\n    Check if the Ollama API is available and healthy.\n    Returns:\n        bool: True if API is healthy, False otherwise\n    \"\"\"\n    try:\n        logger.debug(\"Checking Ollama API health...\")\n        response = requests.get(OLLAMA_VERSION_ENDPOINT, timeout=HEALTH_CHECK_TIMEOUT)\n        if response.status_code == 200:",
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_models",
+        "kind": 2,
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "peekOfCode": "def get_available_models():\n    \"\"\"\n    Get a list of available models from the Ollama API.\n    Returns:\n        list: List of available model names, or default model if error\n    \"\"\"\n    try:\n        logger.debug(\"Fetching available Ollama models...\")\n        response = requests.get(OLLAMA_MODELS_ENDPOINT, timeout=MODELS_FETCH_TIMEOUT)\n        if response.status_code == 200:",
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "peekOfCode": "logger = setup_logger()\ndef check_api_health():\n    \"\"\"\n    Check if the Ollama API is available and healthy.\n    Returns:\n        bool: True if API is healthy, False otherwise\n    \"\"\"\n    try:\n        logger.debug(\"Checking Ollama API health...\")\n        response = requests.get(OLLAMA_VERSION_ENDPOINT, timeout=HEALTH_CHECK_TIMEOUT)",
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_doc",
+        "kind": 2,
+        "importPath": "utils.file_utils",
+        "description": "utils.file_utils",
+        "peekOfCode": "def extract_text_from_doc(uploaded_file):\n    \"\"\"\n    Extract text from uploaded document (PDF or text file).\n    Args:\n        uploaded_file: Streamlit uploaded file object\n    Returns:\n        str: Extracted text or error message\n    \"\"\"\n    start_time = time.time()\n    logger.info(f\"Processing document: {uploaded_file.name} ({uploaded_file.type})\")",
+        "detail": "utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.file_utils",
+        "description": "utils.file_utils",
+        "peekOfCode": "logger = setup_logger()\ndef extract_text_from_doc(uploaded_file):\n    \"\"\"\n    Extract text from uploaded document (PDF or text file).\n    Args:\n        uploaded_file: Streamlit uploaded file object\n    Returns:\n        str: Extracted text or error message\n    \"\"\"\n    start_time = time.time()",
+        "detail": "utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "kind": 2,
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "peekOfCode": "def setup_logger():\n    \"\"\"\n    Configure the logger with appropriate format and settings.\n    \"\"\"\n    # Remove default logger\n    logger.remove()\n    # Add stdout handler with custom format\n    logger.add(\n        sys.stdout,\n        format=\"<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>\",",
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_models",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def fetch_models():\n    \"\"\"Cached function to fetch available models.\"\"\"\n    return get_available_models()\ndef main():\n    \"\"\"Main Streamlit application function.\"\"\"\n    logger.info(\"Starting application\")\n    try:\n        # Configure page\n        st.set_page_config(\n            page_title=PAGE_TITLE,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def main():\n    \"\"\"Main Streamlit application function.\"\"\"\n    logger.info(\"Starting application\")\n    try:\n        # Configure page\n        st.set_page_config(\n            page_title=PAGE_TITLE,\n            page_icon=PAGE_ICON,\n            layout=\"wide\"\n        )",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "setup_sidebar",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def setup_sidebar():\n    \"\"\"\n    Set up the sidebar with model settings and controls.\n    Returns:\n        tuple: (model_name, temperature, top_p, top_k)\n    \"\"\"\n    st.sidebar.header(\"⚙️ Model Settings\")\n    # Model selection\n    try:\n        available_models = fetch_models()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "process_document_upload",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def process_document_upload():\n    \"\"\"\n    Handle document upload in the sidebar.\n    Returns:\n        str: Extracted document text or empty string\n    \"\"\"\n    st.sidebar.header(\"📂 Upload Documents\")\n    try:\n        uploaded_file = st.sidebar.file_uploader(\"Upload a PDF or TXT file\", type=[\"pdf\", \"txt\"], \n                                              help=\"Upload a document to provide context for your queries\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "setup_chat_interface",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def setup_chat_interface(model_name, temperature, top_k, top_p, document_text):\n    \"\"\"\n    Set up the chat interface for user interaction.\n    Args:\n        model_name (str): Selected model name\n        temperature (float): Temperature parameter\n        top_k (int): Top-K parameter\n        top_p (float): Top-P parameter\n        document_text (str): Extracted document text\n    \"\"\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "logger = setup_logger()\n# Cache function to improve performance\n@st.cache_data(ttl=MODELS_CACHE_TTL)  # Cache available models\ndef fetch_models():\n    \"\"\"Cached function to fetch available models.\"\"\"\n    return get_available_models()\ndef main():\n    \"\"\"Main Streamlit application function.\"\"\"\n    logger.info(\"Starting application\")\n    try:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_API_BASE",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OLLAMA_API_BASE = \"http://localhost:11434\"\nOLLAMA_GENERATE_ENDPOINT = f\"{OLLAMA_API_BASE}/api/generate\"\nOLLAMA_MODELS_ENDPOINT = f\"{OLLAMA_API_BASE}/api/tags\"\nOLLAMA_VERSION_ENDPOINT = f\"{OLLAMA_API_BASE}/api/version\"\n# Default model settings\nDEFAULT_MODEL = \"deepseek-r1:1.5b\"\nDEFAULT_TEMPERATURE = 0.7\nDEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_GENERATE_ENDPOINT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OLLAMA_GENERATE_ENDPOINT = f\"{OLLAMA_API_BASE}/api/generate\"\nOLLAMA_MODELS_ENDPOINT = f\"{OLLAMA_API_BASE}/api/tags\"\nOLLAMA_VERSION_ENDPOINT = f\"{OLLAMA_API_BASE}/api/version\"\n# Default model settings\nDEFAULT_MODEL = \"deepseek-r1:1.5b\"\nDEFAULT_TEMPERATURE = 0.7\nDEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_MODELS_ENDPOINT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OLLAMA_MODELS_ENDPOINT = f\"{OLLAMA_API_BASE}/api/tags\"\nOLLAMA_VERSION_ENDPOINT = f\"{OLLAMA_API_BASE}/api/version\"\n# Default model settings\nDEFAULT_MODEL = \"deepseek-r1:1.5b\"\nDEFAULT_TEMPERATURE = 0.7\nDEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OLLAMA_VERSION_ENDPOINT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OLLAMA_VERSION_ENDPOINT = f\"{OLLAMA_API_BASE}/api/version\"\n# Default model settings\nDEFAULT_MODEL = \"deepseek-r1:1.5b\"\nDEFAULT_TEMPERATURE = 0.7\nDEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_MODEL",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DEFAULT_MODEL = \"deepseek-r1:1.5b\"\nDEFAULT_TEMPERATURE = 0.7\nDEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TEMPERATURE",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DEFAULT_TEMPERATURE = 0.7\nDEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOP_K",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DEFAULT_TOP_K = 40\nDEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings\nPAGE_TITLE = \"Chat with Local AI\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_TOP_P",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DEFAULT_TOP_P = 0.9\n# Request timeouts (seconds)\nHEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings\nPAGE_TITLE = \"Chat with Local AI\"\nPAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "HEALTH_CHECK_TIMEOUT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "HEALTH_CHECK_TIMEOUT = 5\nMODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings\nPAGE_TITLE = \"Chat with Local AI\"\nPAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MODELS_FETCH_TIMEOUT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "MODELS_FETCH_TIMEOUT = 10\nMODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings\nPAGE_TITLE = \"Chat with Local AI\"\nPAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_EXECUTION_TIMEOUT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "MODEL_EXECUTION_TIMEOUT = 60\n# Cache settings\nMODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings\nPAGE_TITLE = \"Chat with Local AI\"\nPAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "MODELS_CACHE_TTL",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "MODELS_CACHE_TTL = 3600  # 1 hour\n# Application settings\nPAGE_TITLE = \"Chat with Local AI\"\nPAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_TITLE",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "PAGE_TITLE = \"Chat with Local AI\"\nPAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PAGE_ICON",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "PAGE_ICON = \"🧠\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "run_with_ngrok",
+        "kind": 2,
+        "importPath": "run_app",
+        "description": "run_app",
+        "peekOfCode": "def run_with_ngrok(port=8501):\n    \"\"\"Run the Streamlit app with ngrok tunnel.\"\"\"\n    try:\n        # Get ngrok auth token from environment variable or prompt user\n        ngrok_auth_token = os.environ.get(\"NGROK_AUTH_TOKEN\")\n        if not ngrok_auth_token:\n            ngrok_auth_token = input(\"Enter your ngrok auth token: \")\n        # Set ngrok auth token\n        logger.info(\"Setting up ngrok tunnel...\")\n        ngrok.set_auth_token(ngrok_auth_token)",
+        "detail": "run_app",
+        "documentation": {}
+    }
+]

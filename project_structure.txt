@@ -1,0 +1,16 @@
+# Project Structure
+
+```
+local_chat/
+├── app.py                 # Main Streamlit application
+├── config.py              # Configuration settings
+├── utils/
+│   ├── __init__.py
+│   ├── logging_config.py  # Logging configuration
+│   └── file_utils.py      # Document processing utilities
+├── services/
+│   ├── __init__.py
+│   ├── ollama_service.py  # Ollama API integration
+│   └── model_service.py   # Model execution functionality
+└── requirements.txt       # Project dependencies
+```
