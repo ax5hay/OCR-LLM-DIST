@@ -147,6 +147,7 @@ ngrok.exe
 
 # Secrets and credentials
 .env
+.env.example
 .env.local
 .env.*.local
 secrets.json
