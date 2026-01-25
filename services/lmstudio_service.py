@@ -1,8 +1,8 @@
 """
-Service for interacting with the Ollama API.
+Service for interacting with LMStudio API.
 
 This module provides functions for health checks and model discovery
-with comprehensive error handling and logging.
+with the OpenAI-compatible LMStudio API endpoints.
 """
 
 import json
@@ -13,10 +13,9 @@ from requests.adapters import HTTPAdapterrt Retryt HTTPAdapterrt Retry
 
 from config import (
     DEFAULT_MODEL,
-    HEALTH_CHECK_TIMEOUT,
-    MODELS_FETCH_TIMEOUT,
-    OLLAMA_MODELS_ENDPOINT,
-    OLLAMA_VERSION_ENDPOINT,
+    LMSTUDIO_API_BASE,
+    LMSTUDIO_MODELS_ENDPOINT,
+    LMSTUDIO_CHAT_COMPLETIONS_ENDPOINT,
 )
 from utils.logging_config import setup_logger
 
@@ -44,9 +43,9 @@ def _create_session() -> requests.Session:
 
 def check_api_health() -> bool:
     """
-    Check if the Ollama API is available and healthy.
+    Check if the LMStudio API is available and healthy.
     
-    Performs a version check to verify the API is accessible and responding
+    Performs a models list check to verify the API is accessible and responding
     correctly. Includes automatic retries for transient failures.
     
     Returns:
@@ -55,45 +54,45 @@ def check_api_health() -> bool:
     Example:
         >>> is_healthy = check_api_health()
         >>> if is_healthy:
-        ...     print("API is ready!")
+        ...     print("LMStudio API is ready!")
     """
     try:
-        logger.debug("Checking Ollama API health...")
+        logger.debug("Checking LMStudio API health...")
         session = _create_session()
         
         response = session.get(
-            OLLAMA_VERSION_ENDPOINT,
-            timeout=HEALTH_CHECK_TIMEOUT
+            LMSTUDIO_MODELS_ENDPOINT,
+            timeout=5
         )
         
         if response.status_code == 200:
             try:
-                version = response.json().get('version', 'unknown')
-                logger.success(f"Ollama API is healthy. Version: {version}")
-                return True
+                data = response.json()
+                if "data" in data:
+                    logger.success(f"LMStudio API is healthy")
+                    return True
             except json.JSONDecodeError:
                 logger.warning("API returned 200 but invalid JSON response")
                 return False
         else:
             logger.error(
-                f"Ollama API returned status code: {response.status_code}"
+                f"LMStudio API returned status code: {response.status_code}"
             )
             return False
             
     except requests.exceptions.ConnectionError as e:
         logger.error(
-            f"Connection error: Ollama API is not running or unreachable. "
-            f"Details: {str(e)}"
+            f"Connection error: LMStudio API is not running or unreachable. "
+            f"Ensure LMStudio is running on {LMSTUDIO_API_BASE}"
         )
         return False
     except requests.exceptions.Timeout as e:
         logger.error(
-            f"Timeout: Ollama API did not respond within "
-            f"{HEALTH_CHECK_TIMEOUT}s. Details: {str(e)}"
+            f"Timeout: LMStudio API did not respond. Details: {str(e)}"
         )
         return False
     except requests.exceptions.RequestException as e:
-        logger.exception(f"Failed to connect to Ollama API: {str(e)}")
+        logger.exception(f"Failed to connect to LMStudio API: {str(e)}")
         return False
     except Exception as e:
         logger.exception(f"Unexpected error checking API health: {str(e)}")
@@ -102,9 +101,9 @@ def check_api_health() -> bool:
 
 def get_available_models() -> List[str]:
     """
-    Get a list of available models from the Ollama API.
+    Get a list of available models from the LMStudio API.
     
-    Fetches the list of models installed in Ollama and returns them.
+    Fetches the list of models loaded in LMStudio and returns them.
     If an error occurs, returns a list with the default model.
     Includes automatic retries for transient failures.
     
@@ -114,15 +113,15 @@ def get_available_models() -> List[str]:
     Example:
         >>> models = get_available_models()
         >>> print(f"Available models: {', '.join(models)}")
-        Available models: deepseek-r1:1.5b, llama2:7b
+        Available models: neural-chat:latest, llama2:7b
     """
     try:
-        logger.debug("Fetching available Ollama models...")
+        logger.debug("Fetching available LMStudio models...")
         session = _create_session()
         
         response = session.get(
-            OLLAMA_MODELS_ENDPOINT,
-            timeout=MODELS_FETCH_TIMEOUT
+            LMSTUDIO_MODELS_ENDPOINT,
+            timeout=10
         )
         
         if response.status_code != 200:
@@ -133,11 +132,11 @@ def get_available_models() -> List[str]:
         
         data = response.json()
         
-        if "models" not in data:
-            logger.warning("API response missing 'models' key")
+        if "data" not in data:
+            logger.warning("API response missing 'data' key")
             return [DEFAULT_MODEL]
         
-        models = [model["name"] for model in data["models"]]
+        models = [model.get("id", model) for model in data["data"]]
         
         if not models:
             logger.warning("No models found in API response")
@@ -150,14 +149,13 @@ def get_available_models() -> List[str]:
         
     except requests.exceptions.ConnectionError as e:
         logger.error(
-            f"Connection error fetching models: Ollama API is not running. "
+            f"Connection error fetching models: LMStudio API is not running. "
             f"Details: {str(e)}"
         )
         return [DEFAULT_MODEL]
     except requests.exceptions.Timeout as e:
         logger.error(
-            f"Timeout fetching models: API did not respond within "
-            f"{MODELS_FETCH_TIMEOUT}s. Details: {str(e)}"
+            f"Timeout fetching models: API did not respond. Details: {str(e)}"
         )
         return [DEFAULT_MODEL]
     except requests.exceptions.RequestException as e:
@@ -182,7 +180,7 @@ def validate_model_name(model_name: str) -> bool:
         model_name: Name of the model to validate
         
     Returns:
-        bool: True if model is available, False otherwise
+        bool: True if model exists, False otherwise
     """
     try:
         available_models = get_available_models()

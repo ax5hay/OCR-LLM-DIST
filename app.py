@@ -6,7 +6,7 @@ import sys
 import json
 import time
 import streamlit as st
-from datetime import datetime
+from datetime import datetimemetimeme
 
 # Import configuration and utilities
 from config import (
@@ -16,21 +16,36 @@ from config import (
     DEFAULT_TOP_K,
     DEFAULT_TOP_P,
     MODELS_CACHE_TTL,
+    ACTIVE_LLM_BACKEND,
     DEFAULT_TEMPERATURE,
 )
 from services.model_service import run_model
 from utils.logging_config import setup_logger
 from utils.file_utils import extract_text_from_doc
-from services.ollama_service import check_api_health, get_available_models
+from services.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_models
+from services.lmstudio_service import (
+    check_api_health as lmstudio_health_check,
+    get_available_models as lmstudio_get_models,
+)
 
 # Initialize logger
 logger = setup_logger()
 
 # Cache function to improve performance
 @st.cache_data(ttl=MODELS_CACHE_TTL)  # Cache available models
-def fetch_models():
-    """Cached function to fetch available models."""
-    return get_available_models()
+def fetch_models(backend: str = "ollama"):
+    """
+    Cached function to fetch available models from specified backend.
+    
+    Args:
+        backend: Either "ollama" or "lmstudio"
+        
+    Returns:
+        list: Available models or empty list if fetch fails
+    """
+    if backend == "lmstudio":
+        return lmstudio_get_models()
+    return ollama_get_models()
 
 def main():
     """Main Streamlit application function."""
@@ -44,32 +59,60 @@ def main():
             layout="wide"
         )
         
-        st.title("🧠 Local Chat (This is Experimental)")
-        st.markdown("Chat with selected LLM, upload documents (basic OCR), and adjust hyperparameters(only 3 for now). more features coming soon.")
+        st.title("🧠 Local Chat (Multi-Backend Support)")
+        st.markdown("Chat with selected LLM (Ollama or LMStudio), upload documents (basic OCR), and adjust hyperparameters. More features coming soon.")
 
-        # Check API health
-        api_healthy = check_api_health()
-        if not api_healthy:
-            st.error("⚠️ Cannot connect to Ollama API. Please make sure Ollama is running on http://localhost:11434")
-            logger.error("Ollama API health check failed, halting application execution")
-            return
+        # Backend selection and health check
+        selected_backend = st.sidebar.radio(
+            "🔌 LLM Backend",
+            options=["ollama", "lmstudio"],
+            index=0 if ACTIVE_LLM_BACKEND == "ollama" else 1,
+            help="Select which local LLM backend to use"
+        )
+        
+        # Update session state for backend
+        if "current_backend" not in st.session_state:
+            st.session_state.current_backend = selected_backend
+        else:
+            st.session_state.current_backend = selected_backend
+        
+        # Check selected backend health
+        if selected_backend == "lmstudio":
+            api_healthy = lmstudio_health_check()
+            if not api_healthy:
+                st.error("⚠️ Cannot connect to LMStudio API. Please make sure LMStudio is running on http://127.0.0.1:1234")
+                logger.error("LMStudio API health check failed, halting application execution")
+                return
+            backend_info = "LMStudio (http://127.0.0.1:1234)"
+        else:  # ollama
+            api_healthy = ollama_health_check()
+            if not api_healthy:
+                st.error("⚠️ Cannot connect to Ollama API. Please make sure Ollama is running on http://localhost:11434")
+                logger.error("Ollama API health check failed, halting application execution")
+                return
+            backend_info = "Ollama (http://localhost:11434)"
+        
+        st.sidebar.success(f"✅ Connected to {backend_info}")
 
         # Set up sidebar for model settings
-        model_name, temperature, top_p, top_k = setup_sidebar()
+        model_name, temperature, top_p, top_k = setup_sidebar(selected_backend)
         
         # Document processing section
         document_text = process_document_upload()
 
         # Chat interface
-        setup_chat_interface(model_name, temperature, top_k, top_p, document_text)
+        setup_chat_interface(model_name, temperature, top_k, top_p, document_text, selected_backend)
     
     except Exception as e:
         logger.exception(f"Critical application error: {str(e)}")
         st.error(f"The application encountered a critical error: {str(e)}")
 
-def setup_sidebar():
+def setup_sidebar(backend: str):
     """
     Set up the sidebar with model settings and controls.
+    
+    Args:
+        backend: Selected LLM backend ("ollama" or "lmstudio")
     
     Returns:
         tuple: (model_name, temperature, top_p, top_k)
@@ -78,9 +121,9 @@ def setup_sidebar():
     
     # Model selection
     try:
-        available_models = fetch_models()
+        available_models = fetch_models(backend)
         model_name = st.sidebar.selectbox("Select Model", available_models, index=0)
-        logger.info(f"Selected model: {model_name}")
+        logger.info(f"Selected model: {model_name} from {backend}")
     except Exception as e:
         logger.exception(f"Error fetching or displaying models: {str(e)}")
         model_name = DEFAULT_MODEL
@@ -96,8 +139,12 @@ def setup_sidebar():
             top_p = st.slider("Top-P", 0.1, 1.0, DEFAULT_TOP_P, 0.05, 
                             help="Nucleus sampling parameter")
         
-        top_k = st.sidebar.slider("Top-K", 1, 100, DEFAULT_TOP_K, 5, 
-                                help="Limits vocabulary to top K tokens")
+        # Top-K is not commonly used in LMStudio, but we'll keep it in config
+        if backend == "ollama":
+            top_k = st.sidebar.slider("Top-K", 1, 100, DEFAULT_TOP_K, 5, 
+                                    help="Limits vocabulary to top K tokens")
+        else:
+            top_k = DEFAULT_TOP_K  # Use default for LMStudio
     except Exception as e:
         logger.exception(f"Error setting up hyperparameter controls: {str(e)}")
         temperature, top_p, top_k = DEFAULT_TEMPERATURE, DEFAULT_TOP_P, DEFAULT_TOP_K
@@ -105,9 +152,9 @@ def setup_sidebar():
     
     # Log parameter changes
     if "prev_params" not in st.session_state:
-        st.session_state.prev_params = {"model": model_name, "temperature": temperature, "top_k": top_k, "top_p": top_p}
+        st.session_state.prev_params = {"model": model_name, "temperature": temperature, "top_k": top_k, "top_p": top_p, "backend": backend}
     
-    current_params = {"model": model_name, "temperature": temperature, "top_k": top_k, "top_p": top_p}
+    current_params = {"model": model_name, "temperature": temperature, "top_k": top_k, "top_p": top_p, "backend": backend}
     if current_params != st.session_state.prev_params:
         changes = {k: current_params[k] for k in current_params if st.session_state.prev_params[k] != current_params[k]}
         logger.info(f"Parameter changes: {json.dumps(changes)}")
@@ -158,7 +205,7 @@ def process_document_upload():
         st.sidebar.error(f"Error processing file upload: {str(e)}")
         return ""
 
-def setup_chat_interface(model_name, temperature, top_k, top_p, document_text):
+def setup_chat_interface(model_name, temperature, top_k, top_p, document_text, backend: str):
     """
     Set up the chat interface for user interaction.
     
@@ -168,6 +215,7 @@ def setup_chat_interface(model_name, temperature, top_k, top_p, document_text):
         top_k (int): Top-K parameter
         top_p (float): Top-P parameter
         document_text (str): Extracted document text
+        backend (str): LLM backend ("ollama" or "lmstudio")
     """
     # Initialize chat history if not exists
     if "chat_history" not in st.session_state:
@@ -207,7 +255,7 @@ def setup_chat_interface(model_name, temperature, top_k, top_p, document_text):
         
         if send_button:
             if user_input.strip():
-                logger.info(f"User input received ({len(user_input)} chars)")
+                logger.info(f"User input received ({len(user_input)} chars) via {backend}")
                 
                 # Append document context if available
                 if document_text:
@@ -228,13 +276,13 @@ def setup_chat_interface(model_name, temperature, top_k, top_p, document_text):
                     full_response = ""
                     
                     try:
-                        for chunk in run_model(final_prompt, model_name, temperature, top_k, top_p):
+                        for chunk in run_model(final_prompt, model_name, temperature, top_k, top_p, backend=backend):
                             full_response += chunk
                             # Update the response in real-time
                             response_placeholder.markdown(f"**AI:** {full_response}▌")
                         
                         elapsed_time = time.time() - start_time
-                        logger.success(f"Response generated in {elapsed_time:.2f}s ({len(full_response)} chars)")
+                        logger.success(f"Response generated in {elapsed_time:.2f}s ({len(full_response)} chars) via {backend}")
                         
                         # Update chat history and finalize response
                         st.session_state.chat_history.append(("AI", full_response))

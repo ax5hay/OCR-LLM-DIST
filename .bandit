@@ -1,0 +1,13 @@
+# Bandit configuration for security scanning
+
+# Exclude test files
+exclude_dirs:
+  - tests
+  - test_*.py
+  - *_test.py
+
+# Test names to skip
+skips: []
+
+# Tests to run (empty = all)
+tests: []
