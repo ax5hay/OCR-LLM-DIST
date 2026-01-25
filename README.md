@@ -2,9 +2,12 @@
 
 > A cutting-edge, production-grade distributed chat application that seamlessly integrates Optical Character Recognition (OCR) with Large Language Models (LLMs) to deliver intelligent document processing and conversational AI capabilities.
 
-[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green.svg)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.1-black.svg)](https://nextjs.org/)
+
+**[⚡ Quick Start](#-quick-start) • [📚 Full Guide](QUICK_SETUP.md) • [🚀 Startup Options](STARTUP_OPTIONS.md) • [🔌 LMStudio Setup](LMSTUDIO_INTEGRATION.md)**
 
 ---
 
@@ -60,95 +63,47 @@ Before you begin, ensure you have the following installed:
 
 ## 🚀 Quick Start
 
-### 1. Clone the Repository
+### ⚡ 60-Second Launch (Recommended)
+
+Choose your preferred interface:
+
+**Full-Featured SaaS (Next.js):**
 ```bash
-git clone https://github.com/ax5hay/OCR-LLM-DIST.git
-cd OCR-LLM-DIST
+./start.sh
 ```
+Opens beautiful Next.js UI with all features on http://localhost:3000
 
-### 2. Setup Python Environment
+**Lightweight Option (Streamlit):**
 ```bash
-# Create virtual environment
-python3 -m venv venv
-
-# Activate virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-venv\Scripts\activate
+./start_streamlit.sh
 ```
+Opens simple Streamlit UI on http://localhost:8501
 
-### 3. Install Dependencies
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+**See [Startup Options](STARTUP_OPTIONS.md) for complete details.**
 
-### 4. Configure Environment
-```bash
-# Copy the example environment file
-cp .env.example .env
+---
 
-# Edit .env with your settings (optional, defaults are provided)
-nano .env  # or use your preferred editor
-```
+### 📚 Complete Setup Guide
 
-### 5. Start Your LLM Backend
+For detailed step-by-step instructions, see [QUICK_SETUP.md](QUICK_SETUP.md)
 
-#### Option A: Using Ollama (Recommended)
-```bash
-# In a separate terminal, start Ollama
-ollama serve
+1. Clone repository
+2. Install dependencies
+3. Start LLM backend (LMStudio or Ollama)
+4. Run startup script
+5. Begin chatting!
 
-# In another terminal, pull a model (if needed)
-ollama pull deepseek-r1:1.5b
-```
+---
 
-#### Option B: Using LMStudio
-1. Download and install LMStudio from https://lmstudio.ai/
-2. Launch LMStudio application
-3. Download a model from the model hub (e.g., "neural-chat")
-4. Start the local API server (usually starts automatically)
-5. Verify it's running: `curl http://127.0.0.1:1234/v1/models`
+### 🔌 LMStudio Setup
 
-### 6. Launch the Application
-```bash
-# Standard Streamlit deployment
-streamlit run app.py
-
-# The app will be available at: http://localhost:8501
-
-# (Optional) Set backend environment variable for LMStudio
-export ACTIVE_LLM_BACKEND=lmstudio
-streamlit run app.py
-```
+For detailed LMStudio configuration, see [LMSTUDIO_INTEGRATION.md](LMSTUDIO_INTEGRATION.md)
 
 ---
 
 ## 🐳 Docker Deployment
 
-### Using Docker
-```bash
-# Build the Docker image
-docker build -t ocr-llm-chat:latest .
-
-# Run the container
-docker run -p 8501:8501 \
-  -e OLLAMA_API_BASE=http://host.docker.internal:11434 \
-  ocr-llm-chat:latest
-```
-
-### Using Docker Compose (Recommended)
-```bash
-# Start all services
-docker-compose up -d
-
-# View logs
-docker-compose logs -f streamlit
-
-# Stop services
-docker-compose down
-```
+For Docker deployment instructions, see [QUICK_SETUP.md - Deployment Section](QUICK_SETUP.md)
 
 ---
 

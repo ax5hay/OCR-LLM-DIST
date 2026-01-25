@@ -370,6 +370,14 @@
         "documentation": {}
     },
     {
+        "label": "ACTIVE_LLM_BACKEND",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "PAGE_ICON",
         "importPath": "config",
         "description": "config",
@@ -533,68 +541,77 @@
         "documentation": {}
     },
     {
-        "label": "streamlit",
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "StreamingResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "aiofiles",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "streamlit",
-        "description": "streamlit",
-        "detail": "streamlit",
+        "importPath": "aiofiles",
+        "description": "aiofiles",
+        "detail": "aiofiles",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "io",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "run_model",
-        "importPath": "services.model_service",
-        "description": "services.model_service",
-        "isExtraImport": true,
-        "detail": "services.model_service",
-        "documentation": {}
-    },
-    {
-        "label": "extract_text_from_doc",
-        "importPath": "utils.file_utils",
-        "description": "utils.file_utils",
-        "isExtraImport": true,
-        "detail": "utils.file_utils",
-        "documentation": {}
-    },
-    {
-        "label": "check_api_health",
-        "importPath": "services.ollama_service",
-        "description": "services.ollama_service",
-        "isExtraImport": true,
-        "detail": "services.ollama_service",
-        "documentation": {}
-    },
-    {
-        "label": "get_available_models",
-        "importPath": "services.ollama_service",
-        "description": "services.ollama_service",
-        "isExtraImport": true,
-        "detail": "services.ollama_service",
-        "documentation": {}
-    },
-    {
-        "label": "check_api_health",
-        "importPath": "services.lmstudio_service",
-        "description": "services.lmstudio_service",
-        "isExtraImport": true,
-        "detail": "services.lmstudio_service",
-        "documentation": {}
-    },
-    {
-        "label": "get_available_models",
-        "importPath": "services.lmstudio_service",
-        "description": "services.lmstudio_service",
-        "isExtraImport": true,
-        "detail": "services.lmstudio_service",
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
         "documentation": {}
     },
     {
@@ -620,6 +637,151 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "run_model",
+        "importPath": "services.model_service",
+        "description": "services.model_service",
+        "isExtraImport": true,
+        "detail": "services.model_service",
+        "documentation": {}
+    },
+    {
+        "label": "validate_model_parameters",
+        "importPath": "services.model_service",
+        "description": "services.model_service",
+        "isExtraImport": true,
+        "detail": "services.model_service",
+        "documentation": {}
+    },
+    {
+        "label": "run_model",
+        "importPath": "services.model_service",
+        "description": "services.model_service",
+        "isExtraImport": true,
+        "detail": "services.model_service",
+        "documentation": {}
+    },
+    {
+        "label": "check_api_health",
+        "importPath": "services.lmstudio_service",
+        "description": "services.lmstudio_service",
+        "isExtraImport": true,
+        "detail": "services.lmstudio_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_models",
+        "importPath": "services.lmstudio_service",
+        "description": "services.lmstudio_service",
+        "isExtraImport": true,
+        "detail": "services.lmstudio_service",
+        "documentation": {}
+    },
+    {
+        "label": "check_api_health",
+        "importPath": "services.lmstudio_service",
+        "description": "services.lmstudio_service",
+        "isExtraImport": true,
+        "detail": "services.lmstudio_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_models",
+        "importPath": "services.lmstudio_service",
+        "description": "services.lmstudio_service",
+        "isExtraImport": true,
+        "detail": "services.lmstudio_service",
+        "documentation": {}
+    },
+    {
+        "label": "check_api_health",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "isExtraImport": true,
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_models",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "isExtraImport": true,
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "check_api_health",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "isExtraImport": true,
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_models",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
+        "isExtraImport": true,
+        "detail": "services.ollama_service",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_doc",
+        "importPath": "utils.file_utils",
+        "description": "utils.file_utils",
+        "isExtraImport": true,
+        "detail": "utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_doc",
+        "importPath": "utils.file_utils",
+        "description": "utils.file_utils",
+        "isExtraImport": true,
+        "detail": "utils.file_utils",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -791,6 +953,51 @@
         "documentation": {}
     },
     {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api_server",
+        "description": "api_server",
+        "peekOfCode": "app = FastAPI(\n    title=\"OCR-LLM API\",\n    description=\"REST API for OCR-LLM-DIST with Next.js frontend\",\n    version=\"1.0.0\",\n)\n# Add CORS middleware for Next.js frontend\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\n        \"http://localhost:3000\",",
+        "detail": "api_server",
+        "documentation": {}
+    },
+    {
+        "label": "conversation_context",
+        "kind": 5,
+        "importPath": "api_server",
+        "description": "api_server",
+        "peekOfCode": "conversation_context = {}\n@app.get(\"/api/health\")\nasync def health_check(backend: str = Query(\"lmstudio\", description=\"Backend to check\")):\n    \"\"\"\n    Check if the specified backend is healthy.\n    Args:\n        backend: \"ollama\" or \"lmstudio\"\n    Returns:\n        JSON with status and backend info\n    \"\"\"",
+        "detail": "api_server",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_models",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def fetch_models(backend: str = \"ollama\"):\n    \"\"\"\n    Cached function to fetch available models from specified backend.\n    Args:\n        backend: Either \"ollama\" or \"lmstudio\"\n    Returns:\n        list: Available models or empty list if fetch fails\n    \"\"\"\n    if backend == \"lmstudio\":\n        return lmstudio_get_models()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def main():\n    \"\"\"Main Streamlit application function.\"\"\"\n    logger.info(\"Starting application\")\n    try:\n        # ============================================\n        # HEADER\n        # ============================================\n        st.markdown(\"\"\"\n        <div class=\"header-container\">\n            <h1 class=\"header-title\">🧠 Local Chat</h1>",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "setup_chat_interface",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def setup_chat_interface(model_name, temperature, top_k, top_p, document_text, backend: str):\n    \"\"\"Set up the beautiful chat interface.\"\"\"\n    # Initialize chat history\n    if \"chat_history\" not in st.session_state:\n        st.session_state.chat_history = []\n        logger.debug(\"Initialized chat history\")\n    # ============================================\n    # CHAT HISTORY DISPLAY\n    # ============================================\n    st.markdown(\"### 💬 Conversation\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
         "label": "fetch_models",
         "kind": 2,
         "importPath": "app",
@@ -840,6 +1047,15 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
+        "peekOfCode": "logger = setup_logger()\n# ============================================\n# CUSTOM STYLING & THEME\n# ============================================\nst.set_page_config(\n    page_title=PAGE_TITLE,\n    page_icon=PAGE_ICON,\n    layout=\"wide\",\n    initial_sidebar_state=\"expanded\",\n)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
         "peekOfCode": "logger = setup_logger()\n# Cache function to improve performance\n@st.cache_data(ttl=MODELS_CACHE_TTL)  # Cache available models\ndef fetch_models(backend: str = \"ollama\"):\n    \"\"\"\n    Cached function to fetch available models from specified backend.\n    Args:\n        backend: Either \"ollama\" or \"lmstudio\"\n    Returns:\n        list: Available models or empty list if fetch fails",
         "detail": "app",
         "documentation": {}
@@ -860,6 +1076,69 @@
         "description": "run_app",
         "peekOfCode": "def run_with_ngrok(port=8501):\n    \"\"\"Run the Streamlit app with ngrok tunnel.\"\"\"\n    try:\n        # Get ngrok auth token from environment variable or prompt user\n        ngrok_auth_token = os.environ.get(\"NGROK_AUTH_TOKEN\")\n        if not ngrok_auth_token:\n            ngrok_auth_token = input(\"Enter your ngrok auth token: \")\n        # Set ngrok auth token\n        logger.info(\"Setting up ngrok tunnel...\")\n        ngrok.set_auth_token(ngrok_auth_token)",
         "detail": "run_app",
+        "documentation": {}
+    },
+    {
+        "label": "BACKEND_URL",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "BACKEND_URL = \"http://127.0.0.1:8000\"\nAPI_HEALTH = f\"{BACKEND_URL}/api/health\"\nAPI_MODELS = f\"{BACKEND_URL}/api/models\"\nAPI_CHAT = f\"{BACKEND_URL}/api/chat\"\nAPI_UPLOAD = f\"{BACKEND_URL}/api/upload\"\n# Initialize session state\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\nif \"backend_status\" not in st.session_state:\n    st.session_state.backend_status = \"checking\"",
+        "detail": "streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "API_HEALTH",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "API_HEALTH = f\"{BACKEND_URL}/api/health\"\nAPI_MODELS = f\"{BACKEND_URL}/api/models\"\nAPI_CHAT = f\"{BACKEND_URL}/api/chat\"\nAPI_UPLOAD = f\"{BACKEND_URL}/api/upload\"\n# Initialize session state\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\nif \"backend_status\" not in st.session_state:\n    st.session_state.backend_status = \"checking\"\nif \"available_models\" not in st.session_state:",
+        "detail": "streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "API_MODELS",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "API_MODELS = f\"{BACKEND_URL}/api/models\"\nAPI_CHAT = f\"{BACKEND_URL}/api/chat\"\nAPI_UPLOAD = f\"{BACKEND_URL}/api/upload\"\n# Initialize session state\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\nif \"backend_status\" not in st.session_state:\n    st.session_state.backend_status = \"checking\"\nif \"available_models\" not in st.session_state:\n    st.session_state.available_models = []",
+        "detail": "streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "API_CHAT",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "API_CHAT = f\"{BACKEND_URL}/api/chat\"\nAPI_UPLOAD = f\"{BACKEND_URL}/api/upload\"\n# Initialize session state\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\nif \"backend_status\" not in st.session_state:\n    st.session_state.backend_status = \"checking\"\nif \"available_models\" not in st.session_state:\n    st.session_state.available_models = []\nif \"selected_backend\" not in st.session_state:",
+        "detail": "streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "API_UPLOAD",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "API_UPLOAD = f\"{BACKEND_URL}/api/upload\"\n# Initialize session state\nif \"messages\" not in st.session_state:\n    st.session_state.messages = []\nif \"backend_status\" not in st.session_state:\n    st.session_state.backend_status = \"checking\"\nif \"available_models\" not in st.session_state:\n    st.session_state.available_models = []\nif \"selected_backend\" not in st.session_state:\n    st.session_state.selected_backend = \"lmstudio\"",
+        "detail": "streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "chat_container",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "chat_container = st.container()\nwith chat_container:\n    for message in st.session_state.messages:\n        with st.chat_message(message[\"role\"]):\n            st.markdown(message[\"content\"])\n# Input\nuser_input = st.chat_input(\n    \"Type your message here...\",\n    disabled=not selected_model or st.session_state.backend_status != \"healthy\"\n)",
+        "detail": "streamlit_app",
+        "documentation": {}
+    },
+    {
+        "label": "user_input",
+        "kind": 5,
+        "importPath": "streamlit_app",
+        "description": "streamlit_app",
+        "peekOfCode": "user_input = st.chat_input(\n    \"Type your message here...\",\n    disabled=not selected_model or st.session_state.backend_status != \"healthy\"\n)\nif user_input:\n    # Add user message\n    st.session_state.messages.append({\n        \"role\": \"user\",\n        \"content\": user_input\n    })",
+        "detail": "streamlit_app",
         "documentation": {}
     },
     {
