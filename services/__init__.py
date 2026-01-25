@@ -10,7 +10,7 @@ from services.ollama_service import (
 from services.model_service import (
     run_model,
     validate_model_parameters,
-))))
+)
 
 __all__ = [
     "check_api_health",

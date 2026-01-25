@@ -34,6 +34,30 @@
         "documentation": {}
     },
     {
+        "label": "Generator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -90,7 +114,7 @@
         "documentation": {}
     },
     {
-        "label": "HTTPAdapterrt Retryt HTTPAdapterrt Retry",
+        "label": "HTTPAdapter",
         "importPath": "requests.adapters",
         "description": "requests.adapters",
         "isExtraImport": true,
@@ -98,7 +122,23 @@
         "documentation": {}
     },
     {
-        "label": "HTTPAdapterrt Retryt HTTPAdapterrt Retry",
+        "label": "Retry",
+        "importPath": "requests.adapters",
+        "description": "requests.adapters",
+        "isExtraImport": true,
+        "detail": "requests.adapters",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAdapter",
+        "importPath": "requests.adapters",
+        "description": "requests.adapters",
+        "isExtraImport": true,
+        "detail": "requests.adapters",
+        "documentation": {}
+    },
+    {
+        "label": "Retry",
         "importPath": "requests.adapters",
         "description": "requests.adapters",
         "isExtraImport": true,
@@ -290,6 +330,38 @@
         "documentation": {}
     },
     {
+        "label": "SUPPORTED_FILE_EXTENSIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SUPPORTED_DOCUMENT_TYPES",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SUPPORTED_FILE_EXTENSIONS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "SUPPORTED_DOCUMENT_TYPES",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "LOG_LEVEL",
         "importPath": "config",
         "description": "config",
@@ -402,6 +474,22 @@
         "documentation": {}
     },
     {
+        "label": "setup_logger",
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "isExtraImport": true,
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logging_config",
+        "description": "utils.logging_config",
+        "isExtraImport": true,
+        "detail": "utils.logging_config",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -411,44 +499,12 @@
         "documentation": {}
     },
     {
-        "label": "Generator",
-        "importPath": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "description": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "isExtraImport": true,
-        "detail": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "description": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "isExtraImport": true,
-        "detail": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "documentation": {}
-    },
-    {
-        "label": "Literalimport requests",
-        "importPath": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "description": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "isExtraImport": true,
-        "detail": "typing import Generator. Optional. Literalimport requestsfrom typing",
-        "documentation": {}
-    },
-    {
         "label": "fitz",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "fitz",
         "description": "fitz",
         "detail": "fitz",
-        "documentation": {}
-    },
-    {
-        "label": "setup_logger",
-        "importPath": "config import SUPPORTED_FILE_EXTENSIONS. SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config import setup_loggerfrom config import SUPPORTED_FILE_EXTENSIONS. SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config",
-        "description": "config import SUPPORTED_FILE_EXTENSIONS. SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config import setup_loggerfrom config import SUPPORTED_FILE_EXTENSIONS. SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config",
-        "isExtraImport": true,
-        "detail": "config import SUPPORTED_FILE_EXTENSIONS. SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config import setup_loggerfrom config import SUPPORTED_FILE_EXTENSIONS. SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config",
         "documentation": {}
     },
     {
@@ -486,7 +542,7 @@
         "documentation": {}
     },
     {
-        "label": "datetimemetimeme",
+        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -511,18 +567,18 @@
     },
     {
         "label": "check_api_health",
-        "importPath": "services.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service",
-        "description": "services.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
         "isExtraImport": true,
-        "detail": "services.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service",
+        "detail": "services.ollama_service",
         "documentation": {}
     },
     {
         "label": "get_available_models",
-        "importPath": "services.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service",
-        "description": "services.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service",
+        "importPath": "services.ollama_service",
+        "description": "services.ollama_service",
         "isExtraImport": true,
-        "detail": "services.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check. get_available_models as ollama_get_modelsices.ollama_service",
+        "detail": "services.ollama_service",
         "documentation": {}
     },
     {
@@ -551,7 +607,15 @@
         "documentation": {}
     },
     {
-        "label": "Pathrt Pathrt Pathrt Path",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
         "isExtraImport": true,
@@ -589,14 +653,6 @@
         "description": "setuptools",
         "isExtraImport": true,
         "detail": "setuptools",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib import Pathib import Pathib import Pathib",
-        "description": "pathlib import Pathib import Pathib import Pathib",
-        "isExtraImport": true,
-        "detail": "pathlib import Pathib import Pathib import Pathib",
         "documentation": {}
     },
     {

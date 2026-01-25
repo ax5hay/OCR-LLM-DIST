@@ -5,7 +5,7 @@ Run this to verify all files are in place.
 """
 
 import os
-from pathlib import Pathib import Pathib import Pathib import Path
+from pathlib import Path
 
 def verify_transformation():
     """Verify that all expected files exist."""

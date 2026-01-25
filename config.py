@@ -12,7 +12,7 @@ Configuration Priority:
 
 import os
 from typing import Final
-from pathlib import Pathrt Pathrt Pathrt Path
+from pathlib import Path
 
 # Load environment variables from .env file if it exists
 try:

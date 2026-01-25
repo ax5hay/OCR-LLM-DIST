@@ -9,7 +9,8 @@ import json
 import requests
 from typing import List, Optional
 from urllib3.util.retry import Retry
-from requests.adapters import HTTPAdapterrt Retryt HTTPAdapterrt Retry
+from requests.adapters import HTTPAdapter, Retry
+
 
 from config import (
     DEFAULT_MODEL,

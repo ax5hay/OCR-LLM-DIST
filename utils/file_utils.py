@@ -10,7 +10,10 @@ import fitz  # PyMuPDF
 from typing import Optional
 
 from utils.logging_config import setup_logger
-from config import SUPPORTED_FILE_EXTENSIONS, SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config import setup_loggerfrom config import SUPPORTED_FILE_EXTENSIONS, SUPPORTED_DOCUMENT_TYPESfrom utils.logging_config import setup_logger
+from utils.logging_config import setup_logger
+from utils.logging_config import setup_logger
+from config import SUPPORTED_FILE_EXTENSIONS, SUPPORTED_DOCUMENT_TYPES
+from config import SUPPORTED_FILE_EXTENSIONS, SUPPORTED_DOCUMENT_TYPES
 
 logger = setup_logger()
 

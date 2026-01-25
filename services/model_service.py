@@ -8,7 +8,8 @@ Ollama and LMStudio APIs, parameter validation, and comprehensive error handling
 import json
 import time
 import requests
-from typing import Generator, Optional, Literalimport requestsfrom typing import Generator, Optional, Literalimport requests
+import requests 
+from typing import Generator, Optional, Literal
 
 from config import (
     MIN_TOP_K,

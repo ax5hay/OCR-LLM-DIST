@@ -6,7 +6,7 @@ import sys
 import json
 import time
 import streamlit as st
-from datetime import datetimemetimeme
+from datetime import datetime
 
 # Import configuration and utilities
 from config import (
@@ -22,7 +22,7 @@ from config import (
 from services.model_service import run_model
 from utils.logging_config import setup_logger
 from utils.file_utils import extract_text_from_doc
-from services.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_modelsices.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_models
+from services.ollama_service import check_api_health as ollama_health_check, get_available_models as ollama_get_models
 from services.lmstudio_service import (
     check_api_health as lmstudio_health_check,
     get_available_models as lmstudio_get_models,
