@@ -3,7 +3,6 @@
 > A cutting-edge, production-grade distributed chat application that seamlessly integrates Optical Character Recognition (OCR) with Large Language Models (LLMs) to deliver intelligent document processing and conversational AI capabilities.
 
 [![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green.svg)](https://fastapi.tiangolo.com/)
 [![Next.js](https://img.shields.io/badge/Next.js-15.1-black.svg)](https://nextjs.org/)
 
@@ -539,10 +538,6 @@ copies or substantial portions of the Software.
 - **API Integrations**: 1 (Ollama)
 - **Supported File Formats**: 2 (PDF, TXT)
 - **Python Version**: 3.8+
-- **License**: MIT
 
----
 
-**Built with ❤️ by the OCR-LLM team**
 
-⭐ If you find this project helpful, please consider giving it a star on GitHub!
